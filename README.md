@@ -1,2 +1,1 @@
-# learn-electron
- repository for learning
+> 響け！ときめき——。
