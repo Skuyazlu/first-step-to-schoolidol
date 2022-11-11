@@ -11,31 +11,33 @@
       body{
         background-color: #ffcccc;
       }
-      #left-board{
-        float: left;
+      #root{
+        display: -webkit-flex;
+      }
+      #root *{
         height: 100%;
       }
-      #right-board{
-        width: 100%;
-        height: 100%;
-      }
-      #title{
-        width: 100%;
-        height: 50%;
-      }
-      #panel{
-        width: 100%;
-        height: 50%;
-        font-size: larger;
-      }
-      #title *,#panel *{
-        font-size: larger;
-        margin: auto;
+      span{
+        display: block;
+        position: absolute;
+        /**transform: translate(-50%,-50%);**/
       }
       #main-viewer{
         opacity: 0;
+        width: auto;
         height: 100%;
         transition: opacity 1s;
+      }
+      #right_board{
+        display: -webkit-flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      #panel{
+        height: 50%;
+        display: -webkit-box;
+        justify-content: space-around;
+
       }
     </style>
     
@@ -43,11 +45,17 @@
   <body>
     <div id="root">
       <div id="left-board">
-        <img id="main-viewer" alt="nijigakuen" onload="this.style.opacity=1;" src="./misc/img/Llnijigaku_Anime_KV2.jpg">
+        <img id="main-viewer" alt="nijigakuen" onload="this.style.opacity=1;" src="./misc/img/Llnijigaku_Anime_KV2_btext.jpg">
       </div>
       <div id="right-board">
-        <div id="title"><span>響け！ときめき——。</span></div>
-        <div id="panel"></div>
+        <div height="50%" >
+        <img src="./misc/img/Niji_fanbk1_test.png" style="width: 80%;height:auto;margin: auto;">
+      </div>
+        <div id="panel">
+        <span style="left:33%;top:67%;">START</span>
+        <span style="left:67%;top:67%;">QUIT</span>
+        </div>
+      </div>
       </div>
     </div>
   </body>

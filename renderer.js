@@ -1,7 +1,13 @@
 var root = document.getElementById("root")
+var left = root.children[0]
+var right = root.children[1]
 var quit = document.getElementById("quit")
 var back = document.getElementById("back")
 root.style.height=screen.height+"px"
+const img_width = screen.height*1300/1828
+left.style.width = img_width+"px"
+right.style.width = (screen.width-img_width)+"px"
+
 
 document.addEventListener("keydown",keydown);
 var quit = function(){
@@ -37,6 +43,9 @@ function keydown(event){
             //window.electronAPI.win_close();
             quit();
 
+            break;
+        case 123:
+            window.electronAPI.dev_open();
             break;
     }
 }

@@ -17,7 +17,9 @@ const createWindow = () => {
  
     // 开启调试模式
     mainWindow.webContents.openDevTools();
- 
+    ipcMain.on('opendev',()=>{
+      mainWindow.webContents.openDevTools();
+    })
     //去掉顶部菜单
     mainWindow.setMenu(null);  
      

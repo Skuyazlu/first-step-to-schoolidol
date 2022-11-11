@@ -22,5 +22,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   },
   win_close(){
     ipcRenderer.send('window-close');
+  },
+  dev_open(){
+    ipcRenderer.send('opendev');
   }
 })
